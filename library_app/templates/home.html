@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Library</h1>
+    </header>
+    <h2>Featured Books</h2>
+    <div class="book">
+        <h3> Title: {{book1.title}}</h3>
+        <p>Author: {{book1.author}}</p>
+        <p>Subject: {{book1.subject}}</p>
+    </div>
+    <footer>
+        <p> More Info </p>
+        <a href="{% url 'about' %}">About Us</a>
+        <a href="{% url 'contact' %}">Contact Us</a>
+    </footer>
+</body>
+</html>
+
